@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-
+// 類似的題目:https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 /*int strn( char *str, char c ){
     int i = 0, count_of_c = 0;
     while( *(str + i) ){
