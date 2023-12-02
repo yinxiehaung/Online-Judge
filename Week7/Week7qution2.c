@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+///// Refer:https://alan23273850.github.io/Online-Judge-Problems/zerojudge/c073/         
 #define COMPARE_STRING(x,y) strcmp(x,y) == 0
 
 void replace_blocks( int *group, int size_of_group, int *next, int size_of_next,\
