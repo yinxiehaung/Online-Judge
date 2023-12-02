@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//UVA 3n+1
 int main(){
     int i, j;
     while(scanf("%d %d", &i, &j) != EOF){
