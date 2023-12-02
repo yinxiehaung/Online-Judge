@@ -33,7 +33,7 @@ int main(){
 
                         if( BURYING(index, j, size) ){
                             survive[index] = survive[BURYING(index, j, size) - 1 ];
-                            survive[(index + j) % size - 1] = false;
+                            survive[BURYING(index, j, size) - 1] = false;
                         }else{
                             survive[index] = survive[size - 1];
                             survive[size - 1] = false;
