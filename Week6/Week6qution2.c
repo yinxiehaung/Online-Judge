@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//printf binary
 int main(){
     int num, bin[32] = {}, j = 0;
     scanf("%d", &num);
