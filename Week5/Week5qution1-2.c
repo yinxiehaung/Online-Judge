@@ -1,7 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 int mod = 0;
-
+////////  Problem ///////////
+////     UVA-11321      /////
+/////////////////////////////
 int compare( const void *arg1, const void *arg2 ){
     int a = *(int *)arg1,b = *(int *)arg2;
     if( a % mod != b % mod ){
