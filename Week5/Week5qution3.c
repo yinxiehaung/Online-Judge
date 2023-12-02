@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 char str[1000];
-
+//UVA 10062
 int strn( const char *str1, const char c ){
     int count = 0, i = 0;
     while( str[i] ){
