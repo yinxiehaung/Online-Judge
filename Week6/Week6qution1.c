@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/*
+Gives N integer, your job is write a program to sort them as given rule. Prime number comes before non-prime number, 
+if both number are prime number, greater number comes before smaller number, if both number are non-prime number, smaller number comes before greater number.
+*/
 int is_prime( int n ){
     if( n == 1 ){
         return 0;
