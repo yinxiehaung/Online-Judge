@@ -2,8 +2,25 @@
 #include <math.h>
 int _mod = 0;
 int size = 0;
-
-
+////////  Problem ///////////
+////     UVA-11321      /////
+/////////////////////////////
+/*
+    Below is a example, We have store odd numbers array:odd[] and
+    even numbers array:even[].
+    even[5] = { 2, 6, 4, 8, 10};
+    odd[5] = {7, 5, 3, 9};
+    Step 1: Sort in descending order of odd array and even array in ascending order.
+        even[5] = {10, 8, 6, 4, 2};
+        odd[5] = {3, 5, 7, 9};
+    Step 2: Sort in descending order on the mod operation.
+        let MOD = 3;
+        even[5] = {0,10,4,8,2};
+        odd[5] = {3,9,7,5};
+    Step 3:
+        Since the range of mod numbers is -mod+1 to mod-1, use a for loop to print the answer.
+    So, We have completed the problem.
+*/
 int main(){
     scanf("%d %d", &size, &_mod);
     while( size != 0 && _mod != 0){
