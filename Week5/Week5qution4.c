@@ -4,7 +4,7 @@
 int compare( const void *arg1, const void *arg2 ){
     return *(int *)arg1 - *(int *)arg2;
 }
-
+//the code is not wirte by me but I forget the refers.
 int main(){
     int size; 
     while (scanf("%d", &size) != EOF){
