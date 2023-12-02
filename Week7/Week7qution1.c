@@ -5,7 +5,7 @@ int main(){
     while(scanf("%d %d", &i, &j) != EOF){
         int max = 0;
         printf("%d %d", i, j);
-        if( i > j ){
+        if( i > j ){ //swap
             i ^= j;
             j ^= i;
             i ^= j;
