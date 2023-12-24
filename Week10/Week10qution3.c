@@ -8,8 +8,12 @@
 		   typeof(y) _y = y;\
 		   _x >= _y?_x:_y;})
 */
-int MAX( int a , int b ){
+int MAX( int a, int b ){
     return a > b? a:b;
+}
+
+int MIN( int a, int b){
+    return a > b? b:a;
 }
 typedef struct {
     char integer[1000];
@@ -19,13 +23,49 @@ typedef struct {
 
 int main(){
     DeciVar var1, var2, sum;
-    memset(var1.integer,0,1000);
-    memset(var1.decimal,0,1000);
-    memset(var2.integer,0,1000);
-    memset(var2.decimal,0,1000);
-    scanf("%999[^.]%*c%999s%*c",var1.integer, var1.decimal);
-    scanf("%999[^.]%*c%999s%*C",var2.integer, var2.decimal); 
-    int c = 0, len = MAX(strlen(var1.decimal), strlen(var2.decimal)), i;
+    memset(sum.integer, '\0', 1000);
+    memset(sum.decimal, '\0', 1000);
+    memset(var1.integer, '\0', 1000);
+    memset(var2.integer, '\0', 1000);
+    memset(var1.decimal, '\0', 1000);
+    memset(var2.decimal, '\0', 1000);
+    char temp[2000];
+    scanf("%s", temp);
+    bool havedec = false;
+    int i = 0, j = 0;
+    for( ;i <= strlen(temp); i++ ){
+        if( temp[i] == '.' ){
+            havedec = true;
+            break;
+        }
+    }
+    i = havedec ? i:i-1;
+    for(;j <= i; j++ ){
+        var1.integer[j] = temp[j];
+    }
+    var1.integer[j - 1] = '\0';
+    for(j = 1; j < strlen(temp) - i && havedec; j++ ){
+        var1.decimal[j - 1] = temp[i + j];
+    }
+    var1.decimal[j - 1] = '\0';
+    scanf("%s", temp);
+    i = 0;j = 0;havedec = false;
+    for( ;i <= strlen(temp); i++ ){
+        if( temp[i] == '.' ){
+            havedec = true;
+            break;
+        }
+    }
+    i = havedec?i:i-1;
+    for(;j <= i; j++ ){
+        var2.integer[j] = temp[j];
+    }
+    var2.integer[j - 1] = '\0';
+    for(j = 1; j < strlen(temp) - i && havedec; j++ ){
+        var2.decimal[j - 1] = temp[i + j];
+    }
+    var2.decimal[j - 1] = '\0';
+    int c = 0, len = MAX(strlen(var1.decimal), strlen(var2.decimal));
     bool print_dec = false;
     for(i = 0; i < len; i++ ){
         int x = var1.decimal[len - i - 1] != 0?var1.decimal[len - i - 1] - '0':0;
